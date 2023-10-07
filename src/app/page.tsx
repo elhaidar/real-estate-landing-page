@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: "Real Estate App | Investing In Your Future One Home At A Time",
     description:
       "We'll help you find the key to your dream home. Experience the joy of homeownership. Let us make your home buying journey simple.",
-    url: "https://real-estate-app.vercel.app",
+    url: "https://real-estate-landing-page-three.vercel.app",
     siteName: "Real Estate App",
     images: {
       url: "https://nextjs.org/og.png",
