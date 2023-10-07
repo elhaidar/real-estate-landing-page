@@ -38,62 +38,64 @@ const Navbar = ({ data }: { data: any }) => {
   };
 
   return (
-    <nav className="w-full">
-      <ul className="mx-8 lg:mx-32 flex justify-between items-center relative">
-        <li className="flex items-center gap-16">
-          <Link href="#">
-            <div className="relative w-20 h-20">
-              <Image
-                src={"/vercel.svg"}
-                alt="logo"
-                object-fit="cover"
-                fill={true}
-              />
+    <header className="w-full">
+      <nav className="max-w-screen-xl mx-auto">
+        <ul className="mx-8 lg:mx-32 flex justify-between items-center relative">
+          <li className="flex items-center gap-16">
+            <Link href="#">
+              <div className="relative w-20 h-20">
+                <Image
+                  src={"/vercel.svg"}
+                  alt="logo"
+                  object-fit="cover"
+                  fill={true}
+                />
+              </div>
+            </Link>
+            <ul className="hidden lg:flex justify-between gap-16">
+              <li>
+                <Link href="#">Home</Link>
+              </li>
+              <li>
+                <Link href="#">Rent</Link>
+              </li>
+              <li>
+                <Link href="#">Sell</Link>
+              </li>
+              <li>
+                <Link href="#">About</Link>
+              </li>
+            </ul>
+          </li>
+          <li className="flex items-center gap-6">
+            <div className="flex items-center gap-6">
+              <button onClick={handleShowWeather} className="z-20">
+                <TiWeatherPartlySunny className="w-8 h-8" />
+              </button>
+              <div className="hidden lg:flex items-center gap-6">
+                <button className="font-medium">Log in</button>
+                <button className="bg-black text-secondary px-6 py-2 rounded-2xl">
+                  Create Account
+                </button>
+              </div>
             </div>
-          </Link>
-          <ul className="hidden lg:flex justify-between gap-16">
-            <li>
-              <Link href="#">Home</Link>
-            </li>
-            <li>
-              <Link href="#">Rent</Link>
-            </li>
-            <li>
-              <Link href="#">Sell</Link>
-            </li>
-            <li>
-              <Link href="#">About</Link>
-            </li>
-          </ul>
-        </li>
-        <li className="flex items-center gap-6">
-          <div className="flex items-center gap-6">
-            <button onClick={handleShowWeather} className="z-20">
-              <TiWeatherPartlySunny className="w-8 h-8" />
-            </button>
-            <div className="hidden lg:flex items-center gap-6">
-              <button className="font-medium">Log in</button>
-              <button className="bg-black text-secondary px-6 py-2 rounded-2xl">
-                Create Account
-              </button>
+            <div className="lg:hidden flex items-center">
+              {isOpen ? (
+                <button onClick={() => setIsOpen(false)} className="">
+                  <CgMenuRightAlt className="w-8 h-8" />
+                </button>
+              ) : (
+                <button onClick={() => setIsOpen(true)} className="">
+                  <CgMenuRightAlt className="w-8 h-8" />
+                </button>
+              )}
             </div>
-          </div>
-          <div className="lg:hidden flex items-center">
-            {isOpen ? (
-              <button onClick={() => setIsOpen(false)} className="">
-                <CgMenuRightAlt className="w-8 h-8" />
-              </button>
-            ) : (
-              <button onClick={() => setIsOpen(true)} className="">
-                <CgMenuRightAlt className="w-8 h-8" />
-              </button>
-            )}
-          </div>
-        </li>
-        <WeatherCard showWeather={showWeather} weather={data} />
-        <Sidebar isOpen={isOpen} ref={sidebarRef} />
-      </ul>
-    </nav>
+          </li>
+          <WeatherCard showWeather={showWeather} weather={data} />
+          <Sidebar isOpen={isOpen} ref={sidebarRef} />
+        </ul>
+      </nav>
+    </header>
   );
 };
 

@@ -17,7 +17,7 @@ const LayoutContainer = ({
 
   useEffect(() => {
     data && dispatch(setWeather(data));
-    console.log(data);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
 
   return (
