@@ -32,7 +32,11 @@ export default function Home() {
     <Container>
       <div className="mx-8">
         <GetStarted />
-        <Section2 />
+      </div>
+      <div className="bg-white">
+        <div className="mx-8">
+          <Section2 />
+        </div>
       </div>
       <div className="bg-black">
         <div className="mx-8">

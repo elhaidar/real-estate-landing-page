@@ -1,9 +1,10 @@
 import Image from "next/image";
+import SearchPropertyCard from "./card/SearchPropertyCard";
 
 const GetStarted = () => {
   return (
-    <section className="my-4">
-      <div className="h-[80vh] max-h-[700px] p-16 text-center relative overflow-hidden">
+    <section className="mt-4 mb-[30%] md:mb-[15%] lg:mb-[5%]">
+      <div className="h-[80vh] lg:h-[90vh] max-h-[700px] p-16 text-center relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full opacity-80">
           <picture>
             <source srcSet="/Hero.jpg" media="(min-width: 1000px)" />
@@ -30,6 +31,9 @@ const GetStarted = () => {
             Get Started
           </button>
         </div>
+      </div>
+      <div className="w-full flex justify-center items-center h-[20vh] lg:h-[10vh]">
+        <SearchPropertyCard />
       </div>
     </section>
   );
