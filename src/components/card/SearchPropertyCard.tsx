@@ -1,6 +1,6 @@
 const SearchPropertyCard = () => {
   return (
-    <form className="relative lg:absolute lg:top-[87%] mt-8 lg:mt-0 flex justify-between items-center bg-white lg:flex-nowrap flex-wrap shadow-md p-8 w-full lg:w-[90%] mx-auto rounded-3xl">
+    <form className="relative lg:absolute lg:top-[80%] mt-8 lg:mt-0 flex justify-between items-center bg-white lg:flex-nowrap flex-wrap shadow-md p-8 w-full lg:w-[90%] mx-auto rounded-3xl">
       <div className="flex justify-center items-center w-1/2 md:w-1/3 lg:w-full border-r-[1px] border-black">
         <div className="flex flex-col w-full pl-4">
           <label htmlFor="location" className="mb-2 px-2 font-medium">
