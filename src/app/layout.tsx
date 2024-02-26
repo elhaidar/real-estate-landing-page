@@ -29,6 +29,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  verification: { google: "vmT0b6oij-dukx3FPzybulh0op9zgjTtRJYO2Gjfo60" },
 };
 
 async function getWeatherData() {
