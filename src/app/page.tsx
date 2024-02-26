@@ -8,9 +8,6 @@ import SectionTestimoni from "@/components/SectionTestimoni";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  verification: {
-    google: "google-site-verification=1231231",
-  },
   openGraph: {
     title: "Real Estate App | Investing In Your Future One Home At A Time",
     description:
